@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TriangleKDTree", "TriangleKDTree\TriangleKDTree.vcxproj", "{01735FA2-0D65-4637-88D9-3B4B8D836C53}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TriangleKDTree.Tests", "TriangleKDTree.Tests\TriangleKDTree.Tests.vcxproj", "{6E9CF9F6-2793-48A2-9689-1CC8FF298E68}"
+	ProjectSection(ProjectDependencies) = postProject
+		{01735FA2-0D65-4637-88D9-3B4B8D836C53} = {01735FA2-0D65-4637-88D9-3B4B8D836C53}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{01735FA2-0D65-4637-88D9-3B4B8D836C53}.Debug|Win32.ActiveCfg = Debug|Win32
+		{01735FA2-0D65-4637-88D9-3B4B8D836C53}.Debug|Win32.Build.0 = Debug|Win32
+		{01735FA2-0D65-4637-88D9-3B4B8D836C53}.Release|Win32.ActiveCfg = Release|Win32
+		{01735FA2-0D65-4637-88D9-3B4B8D836C53}.Release|Win32.Build.0 = Release|Win32
+		{6E9CF9F6-2793-48A2-9689-1CC8FF298E68}.Debug|Win32.ActiveCfg = Debug|Win32
+		{6E9CF9F6-2793-48A2-9689-1CC8FF298E68}.Debug|Win32.Build.0 = Debug|Win32
+		{6E9CF9F6-2793-48A2-9689-1CC8FF298E68}.Release|Win32.ActiveCfg = Release|Win32
+		{6E9CF9F6-2793-48A2-9689-1CC8FF298E68}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

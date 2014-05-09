@@ -1,0 +1,8 @@
+*.pdb
+Binary/
+Intermediate/
+*.sdf
+*.suo
+*.user
+*.ipch
+*.opensdf
