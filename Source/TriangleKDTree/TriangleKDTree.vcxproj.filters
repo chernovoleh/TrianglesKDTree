@@ -3,8 +3,11 @@
   <ItemGroup>
     <ClInclude Include="TriangleKDTree.h" />
     <ClInclude Include="TriangleKDTreeApi.h" />
+    <ClInclude Include="Types.h" />
+    <ClInclude Include="StdAfx.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="TriangleKDTree.cpp" />
+    <ClCompile Include="StdAfx.cpp" />
   </ItemGroup>
 </Project>

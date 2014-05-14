@@ -49,48 +49,54 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
-      <PrecompiledHeader>
-      </PrecompiledHeader>
+      <PrecompiledHeader>Use</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>$(SolutionDir);C:\ThirdParty\gtest-1.6.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir);C:\ThirdParty\boost_1_54_0;C:\ThirdParty\gtest-1.6.0\include;C:\ThirdParty\CGAL-4.4\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\ThirdParty\gtest-1.6.0\msvc\gtest-md\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>gtestd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\ThirdParty\boost_1_54_0\lib32-msvc-10.0;C:\ThirdParty\CGAL-4.4\build\lib;C:\ThirdParty\gtest-1.6.0\msvc\gtest-md\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>gtestd.lib;CGAL_Core-vc100-mt-gd-4.4.lib;CGAL_ImageIO-vc100-mt-gd-4.4.lib;CGAL-vc100-mt-gd-4.4.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
-      <PrecompiledHeader>
-      </PrecompiledHeader>
+      <PrecompiledHeader>Use</PrecompiledHeader>
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>$(SolutionDir);C:\ThirdParty\gtest-1.6.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir);C:\ThirdParty\boost_1_54_0;C:\ThirdParty\gtest-1.6.0\include;C:\ThirdParty\CGAL-4.4\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalLibraryDirectories>C:\ThirdParty\gtest-1.6.0\msvc\gtest-md\Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>gtest.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\ThirdParty\CGAL-4.4\build\lib;C:\ThirdParty\gtest-1.6.0\msvc\gtest-md\Release;C:\ThirdParty\boost_1_54_0\lib32-msvc-10.0;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>gtest.lib;CGAL_Core-vc100-mt-4.4.lib;CGAL_ImageIO-vc100-mt-4.4.lib;CGAL-vc100-mt-4.4.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
     <ClCompile Include="UnitTestsTriangleKDTree.cpp" />
+    <ClCompile Include="UnitTestsTypes.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TriangleKDTree\TriangleKDTree.vcxproj">
       <Project>{01735fa2-0d65-4637-88d9-3b4b8d836c53}</Project>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

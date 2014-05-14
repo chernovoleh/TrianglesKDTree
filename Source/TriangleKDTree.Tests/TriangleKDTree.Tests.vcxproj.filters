@@ -3,5 +3,10 @@
   <ItemGroup>
     <ClCompile Include="main.cpp" />
     <ClCompile Include="UnitTestsTriangleKDTree.cpp" />
+    <ClCompile Include="UnitTestsTypes.cpp" />
+    <ClCompile Include="stdafx.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h" />
   </ItemGroup>
 </Project>
