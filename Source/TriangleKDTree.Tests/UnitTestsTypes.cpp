@@ -5,6 +5,5 @@
 
 TEST(Types, Point)
 {
-	Point p(1, 2, 3);
-	
+	Point p(1, 2, 3);	
 }

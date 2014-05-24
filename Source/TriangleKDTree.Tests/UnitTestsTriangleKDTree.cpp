@@ -5,5 +5,6 @@
 
 TEST(TriangleKDTree, Build)
 {
-	TriangleKDTree tree;
+	std::vector<const Triangle *> triangles;
+	TriangleKDTree tree(triangles);
 }
